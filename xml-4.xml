@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posts>
+	<question Id="3" Body="Q3..." Title="Q3 title...?" />
+	<question Id="4" Body="Q4..." Title="Q4 title...?">
+		<answer Body="Q4Answer1" />
+		<answer Body="Q4Answer2" />
+		<answer Body="Q4Answer7" />
+		<answer Body="Q4Answer8" />
+	</question>
+	<question Id="5" Body="Q5..." Title="Q5 title...?">
+		<answer Body="Q5Answer6" />
+	</question>
+</posts>

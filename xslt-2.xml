@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match="/">
+		<posts>
+			<xsl:for-each select="posts/question">
+				<xsl:sort select="@Id"/>
+				<question>
+					<xsl:attribute name="Id">
+						<xsl:value-of select="@Id"/>
+					</xsl:attribute>
+					<xsl:if test="@Body">
+						<xsl:attribute name="Body">
+							<xsl:value-of select="@Body"/>
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="@Title">
+						<xsl:attribute name="Title">
+							<xsl:value-of select="@Title"/>
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="answer">
+						<answer>
+							<xsl:attribute name="Body">
+								<xsl:value-of select="answer/@Body"/>
+							</xsl:attribute>
+						</answer>
+					</xsl:if>
+				</question>
+			</xsl:for-each>
+		</posts>
+	</xsl:template>
+</xsl:stylesheet>

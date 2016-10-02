@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posts>
+	<row Id="1" PostTypeId="2" ParentId="4" Body="Q4Answer1" />
+	<row Id="2" PostTypeId="2" ParentId="4" Body="Q4Answer2" />
+	<row Id="3" PostTypeId="1" Body="Q3..." Title="Q3 title...?" AnswerCount="0" />
+	<row Id="4" PostTypeId="1" Body="Q4..." Title="Q4 title...?" AnswerCount="4" />
+	<row Id="5" PostTypeId="1" Body="Q5..." Title="Q5 title...?" AnswerCount="1" />
+	<row Id="6" PostTypeId="2" ParentId="5" Body="Q5Answer6" />
+	<row Id="7" PostTypeId="2" ParentId="4" Body="Q4Answer7" />
+	<row Id="8" PostTypeId="2" ParentId="4" Body="Q4Answer8" />
+</posts>

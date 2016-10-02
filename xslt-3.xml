@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match="/">
+		<posts>
+			<xsl:for-each select="posts/question[@Title]">
+				<question>
+					<xsl:variable name="qid" select="@Id" />
+					<xsl:attribute name="Id">
+						<xsl:value-of select="@Id"/>
+					</xsl:attribute>
+					<xsl:attribute name="Body">
+						<xsl:value-of select="@Body"/>
+					</xsl:attribute>
+					<xsl:attribute name="Title">
+						<xsl:value-of select="@Title"/>
+					</xsl:attribute>
+					<xsl:for-each select="preceding-sibling::question[@Id = $qid]">
+						<xsl:copy-of select="./answer"/>
+					</xsl:for-each>
+					<xsl:for-each select="following-sibling::question[@Id = $qid]">
+						<xsl:copy-of select="./answer"/>
+					</xsl:for-each>
+				</question>
+			</xsl:for-each>
+		</posts>
+	</xsl:template>
+</xsl:stylesheet>
